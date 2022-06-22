@@ -1,0 +1,33 @@
+input: .
+output: .retype
+url: yunadocs.com
+branding:
+  title: Yuna Docs
+  label: Beta
+  logo: static/logo-dark.svg
+  logoDark: static/logo.svg
+  logoAlign: left
+favicon: static/favicon.ico
+meta:
+  title: " | Yuna Docs"
+search:
+  noResultsFoundMsg: Désolé, aucun résultat trouvé.
+  placeholder: Recherche
+links:
+  - text: Serveur Discord
+    link: https://discord.gg/VDWb3yDRND
+    icon: ./static/icons/discord.svg
+    target: blank
+  - text: Github
+    link: https://github.com/Simon-Fontaine/yuna-docs
+    icon: mark-github
+    target: blank
+footer:
+  copyright: "&copy; Copyright {{ year }} – [Yuna Docs](https://yunadocs.com/) – Tous droits réservés."
+  links:
+    - text: Conditions générales d'utilisation
+      link: legal/tos.md
+      icon: law
+    - text: Politique de confidentialité
+      link: legal/privacy.md
+      icon: shield
