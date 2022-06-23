@@ -19,7 +19,7 @@ links:
     icon: ./static/icons/discord.svg
     target: blank
   - text: Github
-    link: https://github.com/Simon-Fontaine/yuna-docs
+    link: https://github.com/Simon-Fontaine/yunadocs
     icon: mark-github
     target: blank
 footer:
@@ -31,3 +31,8 @@ footer:
     - text: Politique de confidentialité
       link: legal/privacy.md
       icon: shield
+edit:
+  repo: "https://github.com/Simon-Fontaine/yunadocs"
+  label: "Modifie cette page"
+editor:
+  enabled: true
