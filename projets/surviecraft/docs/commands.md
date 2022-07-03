@@ -13,20 +13,20 @@ Vous pouvez aussi retrouver des commandes avec un préfix [!badge variant="succe
 !!!
 Ces tag représente les permissions nécessaires pour pouvoir utiliser la commande:
 
-[!badge variant="secondary" text="@everyone"] [!badge variant="danger" text="@| Star SurvieCraft"] [!badge variant="primary" text="@| Guide"] [!badge variant="warning" text="@| Modérateur"] [!badge variant="danger" text="@| SuperModo"] [!badge variant="success" text="@| Développeur"] [!badge variant="primary" text="@| Responsable"] [!badge variant="danger" text="@| Administrateur"]
+[!badge variant="secondary" text="@everyone"] [!badge variant="danger" text="@| Star SurvieCraft"] [!badge variant="secondary" text="@| Streamer"] [!badge variant="warning" text="@| Youtubeur"] [!badge variant="primary" text="@| Guide"] [!badge variant="warning" text="@| Modérateur"] [!badge variant="danger" text="@| SuperModo"] [!badge variant="success" text="@| Développeur"] [!badge variant="primary" text="@| Responsable"] [!badge variant="danger" text="@| Administrateur"]
 !!!
 
 ## Administration
 
-### `suggestion` [!badge variant="primary" text="SLASH"] [!badge variant="success" text="PREFIX"]
+### `suggestion` [!badge variant="primary" text="SLASH"]
 
 Accepter ou refuser une suggestion
 
 ```
-/suggestion [message-id] [nouveau-statut] (raison)
+/suggestion [identifiant du message] [nouveau-statut] (raison)
 ```
 
-> Nouveau statut disponible: `ACCEPTED`, `DENIED` et `WAITING`
+> Nouveau statut disponible: `ACCEPTED`, `DENIED`, `COMINGSOON` et `WAITING`
 
 [!badge variant="success" text="@| Développeur"] [!badge variant="primary" text="@| Responsable"] [!badge variant="danger" text="@| Administrateur"]
 
@@ -54,9 +54,43 @@ Gérer les messages automatiques du serveur
 
 ## Modération
 
+[!ref](/projets/surviecraft/docs/moderation.md)
+
 !!!warning Permissions nécessaires
 Par défaut, des permissions sont demandées pour les commandes de cette catégorie, et diffèrent suivant la commande. Consultez la page [Modération](/projets/surviecraft/docs/moderation.md) pour en savoir plus.
 !!!
+
+### `ban` [!badge variant="primary" text="SLASH"] [!badge variant="success" text="PREFIX"]
+
+Bannit un membre du serveur en lui envoyant une notification
+
+```
+/ban [@membre || identifiant] [raison]
+```
+
+### `kick` [!badge variant="primary" text="SLASH"] [!badge variant="success" text="PREFIX"]
+
+Expulse un membre du serveur et lui envoie une notification.
+
+```
+/kick [@membre || identifiant] [raison]
+```
+
+### `mute` [!badge variant="primary" text="SLASH"] [!badge variant="success" text="PREFIX"]
+
+Rend [muet](https://support.discord.com/hc/fr/articles/4413305239191-Time-Out-FAQ) un membre du serveur
+
+```
+/mute [@membre || identifiant] [durée: s/m/h/d => seconde/minute/heure/jour] [raison]
+```
+
+### `unmute` [!badge variant="primary" text="SLASH"] [!badge variant="success" text="PREFIX"]
+
+Met fin au mute d'un membre du serveur
+
+```
+/mute [@membre || identifiant] [durée: s/m/h/d => seconde/minute/heure/jour] [raison]
+```
 
 ### `clearchat` [!badge variant="primary" text="SLASH"] [!badge variant="success" text="PREFIX"]
 
@@ -86,20 +120,44 @@ Gérer les membres d'un ticket.
 /ticket [remove] [membre]
 ```
 
+```Fermer un ticket
+/ticket [close]
+```
+
 [!badge variant="primary" text="@| Guide"] [!badge variant="warning" text="@| Modérateur"] [!badge variant="danger" text="@| SuperModo"] [!badge variant="success" text="@| Développeur"] [!badge variant="primary" text="@| Responsable"] [!badge variant="danger" text="@| Administrateur"]
+
+---
+
+### `staffticket` [!badge variant="primary" text="SLASH"]
+
+Gérer les membres d'un ticket.
+
+```Ajout d'un membre
+/staffticket [add] [membre]
+```
+
+```Retrait d'un membre
+/staffticket [remove] [membre]
+```
+
+```Fermer un staffticket
+/staffticket [close]
+```
+
+[!badge variant="success" text="@| Développeur"] [!badge variant="primary" text="@| Responsable"] [!badge variant="danger" text="@| Administrateur"]
 
 ---
 
 ### `warn` [!badge variant="primary" text="SLASH"]
 
-Gérer les avertissements d'un membre
+Gérer les avertissements d'un membre.
 
 ```Ajout d'un avertissement
 /warn [add] [membre] [raison]
 ```
 
 ```Retrait d'un avertissement
-/warn [remove] [membre] [id de l'avertissement]
+/warn [remove] [membre] [identifiant de l'avertissement]
 ```
 
 ```Liste des avertissements
@@ -114,7 +172,7 @@ Gérer les avertissements d'un membre
 
 ### `rolecolor` [!badge variant="primary" text="SLASH"] [!badge variant="success" text="PREFIX"]
 
-Permet aux Nitro Boosters de changer la [couleur de leur rôle](https://www.google.com/search?q=color+picker)
+Permet aux Nitro Boosters de changer la [couleur de leur rôle](https://www.google.com/search?q=color+picker).
 
 ```
 /rolecolor [hex-color]
@@ -123,6 +181,24 @@ Permet aux Nitro Boosters de changer la [couleur de leur rôle](https://www.goog
 [!badge variant="danger" text="@| Star SurvieCraft"]
 
 ---
+
+### `bc` [!badge variant="primary" text="SLASH"]
+
+Permet aux Youtubeurs et aux Streamers d'envoyer un message d'annonce dans le salon [#🎬┃vidéos-et-stream](https://discord.com/channels/400071438633271299/991739758508249138) pour avertir les membres du serveur de la sortie d'un nouvelle vidéo ou d'un live.
+
+```Annonce Vidéo
+/bc youtube [description de la vidéo] [lien de la vidéo]
+```
+
+```Annonce Live
+/bc stream [description du live] [lien du live]
+```
+
+!!!secondary
+Cooldown: `6h`
+!!!
+
+[!badge variant="secondary" text="@| Streamer"] [!badge variant="warning" text="@| Youtubeur"]
 
 ## Testing
 
