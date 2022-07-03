@@ -22,6 +22,10 @@ links:
     link: https://github.com/Simon-Fontaine/yunadocs
     icon: mark-github
     target: blank
+  - text: Statut des services
+    link: https://satus.yunadocs.com/
+    icon: broadcast
+    target: blank
 footer:
   copyright: "&copy; Copyright {{ year }} – [Yuna Docs](https://yunadocs.com/) – Tous droits réservés."
   links:
